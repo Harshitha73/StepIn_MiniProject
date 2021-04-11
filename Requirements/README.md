@@ -26,17 +26,17 @@
 
    Table representing the Space and Time Complexities of various Sorting Techniques:
    
-   <img src="https://github.com/Harshitha73/StepIn_MiniProject/blob/main/Requirements/Time%20Complexity%20Table.png">
+   <img src="https://github.com/Harshitha73/StepIn_MiniProject/blob/main/Requirements/TimeComplexity%20Table.png">
     
 
 # Defining the System:
   The System is a user interactive interface that has a Menu providing the various Sorting Algorithms present in the System and the User can choose the required Algorithm and the system performs the selected sorting mechanismand provides the output to the User. 
    The System consists some of the various techniques available for Sorting a given list of elements. While each of the algorithms have a different methodolgy in sorting, the below flowwchart gives the basic idea on how the elements are sorted.
   
-  <img src="https://github.com/Harshitha73/StepIn_MiniProject/blob/main/Requirements/FlowChart%20of%20Sorting.png">
+  <img src="https://github.com/Harshitha73/StepIn_MiniProject/blob/main/Requirements/Flowchart.png">
 
 # SWOT Analysis:
-  <img src="https://github.com/Harshitha73/StepIn_MiniProject/blob/main/Requirements/SWOT%20Analysis.jpg">
+  <img src="https://github.com/Harshitha73/StepIn_MiniProject/blob/main/Requirements/SWOT%20Analysis.png">
     
 # 4W's and 1'H:
   
