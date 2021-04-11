@@ -30,8 +30,8 @@
     
 
 # Defining the System:
-
-  The System consists some of the various techniques available for Sorting a given list of elements. While each of the algorithms have a different methodolgy in sorting, the below flowwchart gives the basic idea on how the elements are sorted.
+  The System is a user interactive interface that has a Menu providing the various Sorting Algorithms present in the System and the User can choose the required Algorithm and the system performs the selected sorting mechanismand provides the output to the User. 
+   The System consists some of the various techniques available for Sorting a given list of elements. While each of the algorithms have a different methodolgy in sorting, the below flowwchart gives the basic idea on how the elements are sorted.
   
   <img src="https://github.com/Harshitha73/StepIn_MiniProject/blob/main/Requirements/FlowChart%20of%20Sorting.png">
 
@@ -57,4 +57,26 @@
 
 # Detail Requirements:
     
+ ## High Level Requirements:
+ |ID | Description | Status | 
+ | :-----: | :-----:  | :---------: |
+ | HLR01 | User shall be able to see the available sorting algorithms | Implemented | 
+ | HLR02 | User shall be able to select the  required option from the given algorithms | Implemented |
+ | HLR03 | User shall be able to give the required array size | Implemented |
+ | HLR04 | User shall be able to give the elements of the array | Implemented |
+ | HLR05 |The System must give the output i.e., the Sorted elements of the array and the Time Complexity of the Algorithm  | Implemented |
+ | HLR06 | User shall be able to repeat the task any number of times they want to | Implemented |
+ | HLR07 | User shall be able to exit the system whenever they want to  | Implemented |
  
+ ## Low LeveL Requirements:
+ | ID | Description | HLR ID | Status (Implemented/Future) |
+| ------ | --------- | ------ | ----- |
+| LLR01 | When the system is trigged, the system will greet the User with a "Welcome" message | HR01 | Implemented |
+| LLR02 | When the User enters into the system, the User will be given options to select from the available Sorting Algorithms | HLR01 | Implemented |
+| LLR03 | The available options are the Sorting Algorithms and an "EXIT" option, which allows the User to logout off the system | HLR02 | Implemented |
+| LLR04 | When the User selects the option, the system must check if it's a valid option or not and if the option is not not valid, the system should print an "INVALID" message | HLR02 | Implemented |
+| LLR05 | If the User selects a "VALID" option, then the system calls the fuction corresponding to that Algorithm or option | HLR02 | Implemented |
+| LLR06 | After selecting the Sorting Algorithm, the system requires the arguments for the function which were supposed to be given by the User, the input required is the size of the array and it's elements| HLR03, HLR04 | Implemented |
+| LLR07 | The System must provide the output by sorting the elements of the array using the select approach and the Time Complexity of that particular Algorithm| HLR05 | Implemented |
+| LLR08 | The System should be able to repeat the process any number of times by providing the "Sorting Menu" for the User to choose and respond with the choosen action| HLR02, HR06 | Implemented |
+| LLR09 | If the User decides to exit the system, the system should prompt a "Thank you" message and should end the program | HR07 | Implemented |
