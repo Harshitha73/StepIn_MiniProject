@@ -35,7 +35,7 @@ $(PROJECT_NAME).exe : $(SRC)
 run: $(PROJECT_NAME).exe
 	$(PROJECT_NAME).exe
 
-test: $(TEST)
+test: $(SRC) $(TEST)
 	gcc -I $(INC) $(UNI) $(SRC) $(TEST_SRC) -o test\test_sorting.exe
 	./test\test_sorting.exe
 
