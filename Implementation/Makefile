@@ -1,12 +1,12 @@
 PROJECT_NAME = project_main
 
-SRC = src\BubbleSort.c\
-src\Swap.c\
-src\Display.c\
-src\InsertionSort.c\
-src\SelectionSort.c\
-src\QuickSort.c\
-src\MergeSort.c
+SRC = src/BubbleSort.c\
+src/Swap.c\
+src/Display.c\
+src/InsertionSort.c\
+src/SelectionSort.c\
+src/QuickSort.c\
+src/MergeSort.c
 
 BUILD = build
 
@@ -35,7 +35,7 @@ $(PROJECT_NAME).exe : $(SRC)
 run: $(PROJECT_NAME).exe
 	$(PROJECT_NAME).exe
 
-test: $(SRC) $(TEST)
+test:$(TEST)
 	gcc -I $(INC) $(UNI) $(SRC) $(TEST_SRC) -o test\test_sorting.exe
 	./test\test_sorting.exe
 
