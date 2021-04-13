@@ -1,0 +1,14 @@
+        -:    0:Source:src/BubbleSort.c
+        -:    0:Programs:6
+        -:    1:#include "Sorting.h"
+        -:    2:
+    #####:    3:int* BubbleSort(int array_ptr[], int array_size)
+        -:    4:{
+        -:    5:      
+    #####:    6:     for (int i = 0; i < array_size-1; i++)        
+    #####:    7:       for (int j = 0; j < array_size-i-1; j++) 
+    #####:    8:           if (array_ptr[j] > array_ptr[j+1])
+    #####:    9:               swap(&array_ptr[j], &array_ptr[j+1]);
+        -:   10:  // printf("Bubble Sort: ");
+    #####:   11:  return array_ptr;
+        -:   12:}

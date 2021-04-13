@@ -18,14 +18,7 @@ void Sorting_menu(void);
 int valid_operation(int operation);
 
 
-int main(int argc, char *argv[])
-{
-    printf("\n****Sortingr****\n"); // gcc -I inc -Iunity  project_main.c src\BubbleSort.c src\Swap.c src\Display.c src\InsertionSort
-    while(1)
-    {
-        Sorting_menu();
-    }
-}
+
 
 void Sorting_menu(void)
 {

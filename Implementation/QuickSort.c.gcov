@@ -1,0 +1,52 @@
+        -:    0:Source:src/QuickSort.c
+        -:    0:Programs:6
+        -:    1:#include "Sorting.h"
+        -:    2:
+        -:    3: 
+        -:    4:/* This function takes last element as pivot, places
+        -:    5:the pivot element at its correct position in sorted
+        -:    6:array, and places all smaller (smaller than pivot)
+        -:    7:to left of pivot and all greater elements to right
+        -:    8:of pivot */
+        1:    9:int partition (int array[], int low, int high)
+        -:   10:{
+        1:   11:    int pivot = array[high]; // pivot
+        1:   12:    int i = (low - 1); // Index of smaller element and indicates the right position of pivot found so far
+        -:   13: 
+        3:   14:    for (int j = low; j <= high - 1; j++)
+        -:   15:    {
+        -:   16:        // If current element is smaller than the pivot
+        2:   17:        if (array[j] < pivot)
+        -:   18:        {
+        1:   19:            i++; // increment index of smaller element
+        1:   20:            swap(&array[i], &array[j]);
+        -:   21:        }
+        -:   22:    }
+        1:   23:    swap(&array[i + 1], &array[high]);
+        1:   24:    return (i + 1);
+        -:   25:}
+------------------
+partition:
+------------------
+partition:
+------------------
+        -:   26: 
+        -:   27:/* The main function that implements QuickSort
+        -:   28:arr[] --> Array to be sorted,
+        -:   29:low --> Starting index,
+        -:   30:high --> Ending index */
+        3:   31:int* QuickSort(int array_ptr[], int low, int high)
+        -:   32:{
+        3:   33:    if (low < high)
+        -:   34:    {
+        -:   35:        /* pi is partitioning index, arr[p] is now
+        -:   36:        at right place */
+        1:   37:        int pi = partition(array_ptr, low, high);
+        -:   38: 
+        -:   39:        // Separately sort elements before
+        -:   40:        // partition and after partition
+        1:   41:        QuickSort(array_ptr, low, pi - 1);
+        1:   42:        QuickSort(array_ptr, pi + 1, high);
+        -:   43:    }
+        3:   44:    return array_ptr;
+        -:   45:}

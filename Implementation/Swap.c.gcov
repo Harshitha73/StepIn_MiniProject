@@ -1,0 +1,21 @@
+        -:    0:Source:src/Swap.c
+        -:    0:Programs:6
+        -:    1:#include "Sorting.h"
+        -:    2:
+        7:    3:void swap(int* variable_one, int* variable_two)
+        -:    4:{
+        7:    5:    int temp=*variable_one;
+        7:    6:    *variable_one=*variable_two;
+        7:    7:    *variable_two=temp;
+        7:    8:}
+------------------
+swap:
+------------------
+swap:
+------------------
+swap:
+------------------
+swap:
+------------------
+swap:
+------------------

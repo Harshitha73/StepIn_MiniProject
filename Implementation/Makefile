@@ -8,19 +8,34 @@ src/SelectionSort.c\
 src/QuickSort.c\
 src/MergeSort.c
 
+GCNO = BubbleSort\
+Swap\
+InsertionSort\
+SelectionSort\
+QuickSort\
+MergeSort
+
 BUILD = build
 
 #INC=inc
 UNI=unity/unity.c
 
-INC	= inc\
--Iunity\
+INC	= -Iunity\
+-Itest\
 
+ifdef OS
+   RM = del /q
+   FixPath = $(subst /,\,$1)
+   EXEC = exe
+else
+   ifeq ($(shell uname), Linux)
+      RM = rm -rf
+      FixPath = $1
+	  EXEC = out
+   endif
+endif
 
-INCLUDE_LIBS = -lcunit
-
-TEST_SRC = test/test_sorting.c\
-
+TEST_SRC = test/test_sorting
 
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 
@@ -30,33 +45,30 @@ TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 
 $(PROJECT_NAME).exe : $(SRC)
-	gcc -I $(INC) $(PROJECT_NAME).c $(SRC)  -o $(PROJECT_NAME).exe
+	gcc -I inc $(INC) $(PROJECT_NAME).c $(SRC)  -o $(PROJECT_NAME).exe
 
 run: $(PROJECT_NAME).exe
 	$(PROJECT_NAME).exe
 
 test:$(TEST)
-	gcc -I $(INC) $(UNI) $(SRC) $(TEST_SRC) -o test\test_sorting.exe
+	gcc -Iinc $(INC) $(UNI) $(SRC) $(TEST_SRC).c -o test\test_sorting.exe
 	./test\test_sorting.exe
 
-test1:$(PROJECT_NAME).exe
-	TEST_OUTPUT
+coverage:
+	gcc -fprofile-arcs -ftest-coverage -Iinc $(INC) $(UNI) $(SRC) $(TEST_SRC).c $(PROJECT_NAME).c -o all.out
+	./all.out
+	gcov $(GCNO).gcno
 
-run1:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out
-memcheck:
-	valgrind ./$(PROJECT_NAME).exe
-	
-coverage: $(SRC) 
-	gcc -fprofile-arcs -ftest-coverage $< -o test_sorting.exe
-	./$(PROJECT_NAME).out
-	gcov -a $(SRC)
-
-doc:
-	make -C ./documentation
+#cat *.c.gcov
 
 clean:
-	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
+	del *gcda *gcov *gcno all.out
 
 $(BUILD):
 	mkdir build
+
+all: $(SRC) $(BUILD)
+	gcc -I inc $(UNI) $(SRC) $(INC) $(TEST_SRC).c -o $(PROJECT_OUTPUT)
+
+run1:
+	./$(PROJECT_OUTPUT)
