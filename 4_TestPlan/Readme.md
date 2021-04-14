@@ -2,7 +2,7 @@
 
 ##  High level test plan
 
-| **Test ID** | **Description**                                              | **Exp I/P** | **Exp O/P** | **Actual Out** |**Type Of Test**  |    
+| **Test ID** | **Description**                                              | **Expected Input** | **Expected Output** | **Actual Output** |**Type Of Test**  |    
 |-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
 |  H_01       |Check if the User selections an option from the available choices, and if not print an "INVALID" message|User's choice, an integer | SUCCESS| SUCCESS|Requirement based |
 |  H_02       |Check if the array size and the array elements are matched|  Array size and Elements of the Array|SUCCESS|SUCCESS|Boundary based   |
@@ -11,9 +11,9 @@
 | H_05        |Check if the system asks the user for repeating the process and exits the system when choosed|User's choice|SUCCESS|Scenario based  |
 
 
-##a Low level test plan
+## Low level test plan
 
-| **Test ID** | **Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
+| **Test ID** | **Description**                                              | **Expected Input** | **Expected Output** | **Actual Output** |**Type Of Test**  |    
 |-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
 |  L_01       |When choosing from the options, check if the input is valid or invalid|  User's Choice|Invalid Message/ Invoke the process|SUCCESS|Scenario based |
 |  L_02       |Check that the array size is not negative|Size of the array| Invalid Message|Invalid Message|Scenario based    |
