@@ -1,20 +1,23 @@
 #include "Sorting.h"
-
-/* Status of the operation requested */
+/**
+ * @brief The main logic, menu of the project
+ * 
+ */
+// Status of the operation requested
 #define VALID   (1)
 #define INVALID (0)
 
-/* Calculator operation requested by user*/
+//operation requested by user
 unsigned int choice = 0;
 //int array_size;
 //int* array_ptr;
 
-/* Valid operations */
+// Valid operations 
 enum operations{ bubbleSort=1, insertionSort, selectionSort, quickSort, mergeSort, EXIT };
 
-/* Display the menu of operations supported */
+// Display the menu of operations supported 
 void Sorting_menu(void);
-/* Verifies the requested operations validity */
+// Verifies the requested operations validity 
 int valid_operation(int operation);
 
 
@@ -102,6 +105,6 @@ void Sorting_menu(void)
 
 int valid_operation(int operation)
 {
-    /* Check if the operation is a valid operation */
+    // Check if the operation is a valid operation 
     return ((bubbleSort <= operation) && (EXIT >= operation)) ? VALID: INVALID;
 }
