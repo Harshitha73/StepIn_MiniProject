@@ -62,22 +62,27 @@ void Sorting_menu(void)
     switch(choice)
     {
         case bubbleSort:
+            printf("Time Complexity of Bubble Sort: O(n*n)\n");
             sort.array_ptr=BubbleSort(sort.array_ptr, sort.array_size);
             getchar();
             break;
         case insertionSort:
+            printf("Time Complexity of Insertion Sort: O(n*n)\n");
             sort.array_ptr=InsertionSort(sort.array_ptr,sort.array_size);
             getchar();
             break;
         case selectionSort:
+            printf("Time Complexity of Selection Sort: O(n*n)\n");
             sort.array_ptr=SelectionSort(sort.array_ptr,sort.array_size);
             getchar();
             break;
         case quickSort:
+            printf("Time Complexity of Quick Sort: O(nlogn)\n");
             sort.array_ptr=QuickSort(sort.array_ptr,0,sort.array_size-1);
             getchar();
             break;
         case mergeSort:
+            printf("Time Complexity of Merge Sort: O(n*n)\n");
             sort.array_ptr=MergeSort(sort.array_ptr,0,sort.array_size-1);
             getchar();
             break;
