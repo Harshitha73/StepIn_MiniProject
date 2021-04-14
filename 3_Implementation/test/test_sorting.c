@@ -40,7 +40,7 @@ int main()
 void test_BubbleSort(void) {
  int expected[]={10, 12, 13};
    int list[]={10, 13, 12};
-   int* actual=InsertionSort(list,3);
+   int* actual=BubbleSort(list,3);
    TEST_ASSERT_EQUAL_INT_ARRAY(expected,actual,3);
   
   

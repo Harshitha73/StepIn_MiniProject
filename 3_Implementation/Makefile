@@ -45,7 +45,7 @@ TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 
 $(PROJECT_NAME).exe : $(SRC)
-	gcc -I inc $(INC) $(PROJECT_NAME).c $(SRC)  -o $(PROJECT_NAME).exe
+	gcc -I inc $(INC) $(PROJECT_NAME).c $(SRC) main.c -o $(PROJECT_NAME).exe
 
 run: $(PROJECT_NAME).exe
 	$(PROJECT_NAME).exe
