@@ -1,5 +1,8 @@
 #include "Sorting.h"
-
+/**
+ * @brief Quick Sort function
+ * 
+ */
  
 /* This function takes last element as pivot, places
 the pivot element at its correct position in sorted
@@ -25,14 +28,14 @@ int partition (int array[], int low, int high)
 }
  
 /* The main function that implements QuickSort
-arr[] --> Array to be sorted,
+array_ptr[] --> Array to be sorted,
 low --> Starting index,
 high --> Ending index */
 int* QuickSort(int array_ptr[], int low, int high)
 {
     if (low < high)
     {
-        /* pi is partitioning index, arr[p] is now
+        /* pi is partitioning index, array[p] is now
         at right place */
         int pi = partition(array_ptr, low, high);
  

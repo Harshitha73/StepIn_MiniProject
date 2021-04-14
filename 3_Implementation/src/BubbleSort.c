@@ -1,5 +1,11 @@
 #include "Sorting.h"
-
+/**
+ * @brief Bubble Sort function 
+ * 
+ * @param array_ptr 
+ * @param array_size 
+ * @return int* 
+ */
 int* BubbleSort(int array_ptr[], int array_size)
 {
       

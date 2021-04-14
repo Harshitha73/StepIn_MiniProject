@@ -1,5 +1,11 @@
 #include "Sorting.h"
-
+/**
+ * @brief Insertion Sort
+ * 
+ * @param array_ptr 
+ * @param array_size 
+ * @return int* 
+ */
 int* InsertionSort(int array_ptr[], int array_size)
 {
     int i, j, temp;

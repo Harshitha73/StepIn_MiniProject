@@ -1,5 +1,11 @@
 #include "Sorting.h"
-
+/**
+ * @brief Selection Sort function
+ * 
+ * @param array_ptr 
+ * @param array_size 
+ * @return int* 
+ */
 int* SelectionSort(int* array_ptr, int array_size)
 {
     int i, j, min_idx;
