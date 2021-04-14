@@ -62,7 +62,7 @@ coverage:
 #cat *.c.gcov
 
 clean:
-	del *gcda *gcov *gcno all.out
+	del *gcda *gcov *gcno 
 
 $(BUILD):
 	mkdir build

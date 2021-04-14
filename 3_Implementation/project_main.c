@@ -6,8 +6,8 @@
 
 /* Calculator operation requested by user*/
 unsigned int choice = 0;
-int array_size;
-int* array_ptr;
+//int array_size;
+//int* array_ptr;
 
 /* Valid operations */
 enum operations{ bubbleSort=1, insertionSort, selectionSort, quickSort, mergeSort, EXIT };
@@ -18,10 +18,17 @@ void Sorting_menu(void);
 int valid_operation(int operation);
 
 
+typedef struct Sorting
+{
+  int array_size;
+  int*array_ptr;
+}Sort;
 
 
 void Sorting_menu(void)
 {
+    Sort sort;
+
     printf("\nAvailable Algorithms\n");
     printf("\n1. Bubble Sort\n2. Insertion Sort\n3. Selectiontion Sort\n4. Quick Sort\n5. Merge Sort\n6. Exit");
     printf("\n\tEnter your choice\n");
@@ -39,11 +46,11 @@ void Sorting_menu(void)
     {
         printf("\n\tEnter the array size\n");
        
-        scanf("%d",&array_size);
-        array_ptr=(int*)malloc(array_size * sizeof(int));
+        scanf("%d",&sort.array_size);
+        sort.array_ptr=(int*)malloc(sort.array_size * sizeof(int));
         printf("Enter the elements\n");
-        for(int i=0;i<array_size;i++)
-        scanf("%d", &array_ptr[i]);
+        for(int i=0;i<sort.array_size;i++)
+        scanf("%d", &sort.array_ptr[i]);
     }
     else
     {
@@ -55,23 +62,23 @@ void Sorting_menu(void)
     switch(choice)
     {
         case bubbleSort:
-            array_ptr=BubbleSort(array_ptr, array_size);
+            sort.array_ptr=BubbleSort(sort.array_ptr, sort.array_size);
             getchar();
             break;
         case insertionSort:
-            array_ptr=InsertionSort(array_ptr,array_size);
+            sort.array_ptr=InsertionSort(sort.array_ptr,sort.array_size);
             getchar();
             break;
         case selectionSort:
-            array_ptr=SelectionSort(array_ptr,array_size);
+            sort.array_ptr=SelectionSort(sort.array_ptr,sort.array_size);
             getchar();
             break;
         case quickSort:
-            array_ptr=QuickSort(array_ptr,0,array_size-1);
+            sort.array_ptr=QuickSort(sort.array_ptr,0,sort.array_size-1);
             getchar();
             break;
         case mergeSort:
-            array_ptr=MergeSort(array_ptr,0,array_size-1);
+            sort.array_ptr=MergeSort(sort.array_ptr,0,sort.array_size-1);
             getchar();
             break;
         case EXIT:
@@ -81,7 +88,7 @@ void Sorting_menu(void)
             printf("\n\t---END---\n");
     }
     printf("The sorted elements: ");
-    Display(array_ptr,array_size);
+    Display(sort.array_ptr,sort.array_size);
 }
 
 int valid_operation(int operation)
