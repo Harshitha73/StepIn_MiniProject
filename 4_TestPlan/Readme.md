@@ -8,7 +8,7 @@
 |  H_02       |Check if the array size and the array elements are matched|  Array size and Elements of the Array|SUCCESS|SUCCESS|Boundary based   |
 |  H_03       |Check if the selected option triggers the respective function|User's choice, an integer|SUCCESS|SUCCESS|Required based  |
 |  H_04       |Check if the output is displayed properly|User's choice, Array size and Elements of the Array|Sorted Array elements|Sorted Array elements|Required based  |
-| H_05        |Check if the system asks the user for repeating the process and exits the system when choosed|User's choice|SUCCESS|Scenario based  |
+| H_05        |Check if the system asks the user for repeating the process and exits the system when choosed|User's choice|SUCCESS|SUCCESS|Scenario based  |
 
 
 ## Low level test plan
