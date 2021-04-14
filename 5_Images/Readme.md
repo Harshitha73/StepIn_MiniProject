@@ -1,0 +1,1 @@
+The images consists the flow of project execution at the User's end. 
