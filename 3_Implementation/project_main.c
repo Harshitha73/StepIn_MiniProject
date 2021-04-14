@@ -45,8 +45,12 @@ void Sorting_menu(void)
     if(INVALID != valid_operation(choice))
     {
         printf("\n\tEnter the array size\n");
-       
         scanf("%d",&sort.array_size);
+        if(sort.array_size<=0)
+         {
+             printf("Check the Array size\n");
+             return ;
+         }
         sort.array_ptr=(int*)malloc(sort.array_size * sizeof(int));
         printf("Enter the elements\n");
         for(int i=0;i<sort.array_size;i++)
