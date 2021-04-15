@@ -1,9 +1,9 @@
 # StepIn_MiniProject
 Sorting techniques using C language
 
-Build | Code Quality | Unity 
-|---------|------------|-----------
-[![C/C++ CI](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/c.yml/badge.svg)](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/c.yml)|[![Static Code Quality- Cppcheck](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/cppcheck.yml)  | [![Unit Testing - Unity](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/Unity.yml/badge.svg)](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/Unity.yml) 
+Build | Code Quality | Unity | Gitinspector
+|---------|------------|-----------|----------
+[![C/C++ CI](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/c.yml/badge.svg)](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/c.yml)|[![Static Code Quality- Cppcheck](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/cppcheck.yml)  | [![Unit Testing - Unity](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/Unity.yml/badge.svg)](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/Unity.yml)| [![Contribution Check - Git Inspector](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/Harshitha73/StepIn_MiniProject/actions/workflows/gitinspector.yml)
 
 ## Folder Structure
 Folder             | Description
